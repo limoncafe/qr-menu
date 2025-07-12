@@ -356,15 +356,15 @@
   <div class="accordion-header" onclick="toggleAccordion(this)" id="milkshakeTitle">🥤 Milkshake</div>
   <div class="accordion-content">
     <div class="item">
-      <div class="left"><img src="img/cikolatamilkshake.jpg"><span id="item66">Çikolatalı Milkshake</span></div>
+      <div class="left"><img src="img/cikolatamilk.jpg"><span id="item66">Çikolatalı Milkshake</span></div>
       <div class="price">140 TL</div>
     </div>
     <div class="item">
-      <div class="left"><img src="img/cileklimilkshake.jpg"><span id="item67">Çilekli Milkshake</span></div>
+      <div class="left"><img src="img/cilekmilk.jpg"><span id="item67">Çilekli Milkshake</span></div>
       <div class="price">140 TL</div>
     </div>
     <div class="item">
-      <div class="left"><img src="img/muzlumilkshake.jpg"><span id="item68">Muzlu Milkshake</span></div>
+      <div class="left"><img src="img/muzlumilk.jpg"><span id="item68">Muzlu Milkshake</span></div>
       <div class="price">140 TL</div>
     </div>
   </div>
@@ -390,7 +390,7 @@
       <div class="price">110 TL</div>
     </div>
     <div class="item">
-      <div class="left"><img src="img/cappuccino.jpg"><span id="item43"><span id="item43name">Cappuccino</span><br><small id="item43desc">Eşit miktarda espresso, sıcak süt ve kalın süt köpüğü ile içerir.</small></span></div>
+      <div class="left"><img src="img/cappucino.jpg"><span id="item43"><span id="item43name">Cappucino</span><br><small id="item43desc">Eşit miktarda espresso, sıcak süt ve kalın süt köpüğü ile içerir.</small></span></div>
       <div class="price">100 TL</div>
     </div>
     <div class="item">
@@ -580,7 +580,7 @@
       <div class="price">210 TL</div>
     </div>
     <div class="item">
-      <div class="left"><img src="img/pilav.jpg"><span id="item32"><span id="item32name">Limon Burger</span><br><small id="item32desc">(150gr köfte, Domates, Marul, Turşu, Özel sos) [Çedar +20₺]</small></span></div>
+      <div class="left"><img src="img/limonburger.jpg"><span id="item32"><span id="item32name">Limon Burger</span><br><small id="item32desc">(150gr köfte, Domates, Marul, Turşu, Özel sos) [Çedar +20₺]</small></span></div>
       <div class="price">260 TL</div>
     </div>
   </div>
@@ -590,16 +590,20 @@
   <div class="accordion-header" onclick="toggleAccordion(this)" id="dessertsTitle">🍰 Tatlılar</div>
   <div class="accordion-content">
     <div class="item">
-      <div class="left"><img src="img/waffle1.jpg"><span id="item34">Waffle</span></div>
+      <div class="left"><img src="img/waffle.jpg"><span id="item34">Waffle</span></div>
       <div class="price">210 TL</div>
     </div>
     <div class="item">
-      <div class="left"><img src="img/waffle.jpg"><span id="item35">Dondurmalı Waffle</span></div>
-      <div class="price">240 TL</div>
+      <div class="left"><img src="img/tabakwaffle.jpg"><span id="item35">Dondurmalı Waffle</span></div>
+      <div class="price">120 TL</div>
     </div>
     <div class="item">
-      <div class="left"><img src="img/tabakwaffle.jpg"><span id="item36">Tabak Waffle</span></div>
-      <div class="price">240 TL</div>
+      <div class="left"><img src="img/waffle.jpg"><span id="item36">Tabak Waffle</span></div>
+      <div class="price">140 TL</div>
+    </div>
+    <div class="item">
+      <div class="left"><img src="img/dubai.jpg"><span id="item37">Dubai Cheesecake</span></div>
+      <div class="price">210 TL</div>
     </div>
     <div class="item">
       <div class="left"><img src="img/siswaffle.jpg"><span id="item38">Şiş Waffle</span></div>
@@ -1046,6 +1050,28 @@
   function toggleAccordion(header) {
     const content = header.nextElementSibling;
     content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
+    // Kategoriyi sayfanın üstüne kaydır
+    const headerOffset = header.offsetTop - 20; // Üst boşluk için 20px ayarı
+    const headerHeight = document.querySelector('header').offsetHeight;
+
+    window.scrollTo({
+      top: headerOffset - headerHeight, // Header'ın üstünden başla
+      behavior: 'smooth'
+    });
+
+    // Mobil cihazlarda footer ile çakışmayı önlemek için ayarlama
+    const footer = document.querySelector('.footer');
+    if (window.innerWidth <= 767 && footer) {
+      const footerHeight = footer.offsetHeight;
+      const totalScroll = headerOffset - headerHeight + footerHeight;
+      if (totalScroll + window.innerHeight > document.body.scrollHeight) {
+        window.scrollTo({
+          top: document.body.scrollHeight - window.innerHeight,
+          behavior: 'smooth'
+        });
+      }
+    }
   }
 </script>
 </body>
