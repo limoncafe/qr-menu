@@ -11,7 +11,6 @@
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #fffde7;
@@ -22,7 +21,6 @@
       flex-direction: column;
       position: relative;
     }
-
     .welcome-message {
       position: fixed;
       top: 0;
@@ -42,18 +40,15 @@
       z-index: 9999;
       animation: fadeOut 2.5s ease-in-out forwards;
     }
-
     @keyframes fadeOut {
       0% { opacity: 1; }
       80% { opacity: 1; }
       100% { opacity: 0; visibility: hidden; }
     }
-
     @keyframes fadeIn {
       0% { opacity: 0; visibility: visible; }
       100% { opacity: 1; }
     }
-
     header {
       display: flex;
       justify-content: center;
@@ -62,7 +57,6 @@
       gap: 20px;
       flex-wrap: wrap;
     }
-
     h1 {
       font-family: 'Dancing Script', cursive;
       font-size: 24px;
@@ -74,7 +68,6 @@
       display: flex;
       align-items: center;
     }
-
     .logo-img {
       width: 100px;
       height: 100px;
@@ -82,13 +75,11 @@
       object-fit: cover;
       margin-bottom: 10px;
     }
-
     .lang-dropdown {
       position: relative;
       display: inline-block;
       margin-left: 20px;
     }
-
     .lang-btn {
       background-color: #f4d03f;
       color: #000000;
@@ -98,7 +89,6 @@
       border-radius: 5px;
       cursor: pointer;
     }
-
     .lang-options {
       display: none;
       position: absolute;
@@ -108,7 +98,6 @@
       z-index: 1;
       min-width: 100px;
     }
-
     .lang-options button {
       width: 100%;
       padding: 10px;
@@ -117,11 +106,9 @@
       text-align: left;
       cursor: pointer;
     }
-
     .lang-options button:hover {
       background-color: #f4d03f;
     }
-
     .accordion {
       margin-bottom: 20px;
       border: 1px solid #ccc;
@@ -129,7 +116,6 @@
       overflow: hidden;
       transition: all 0.3s ease;
     }
-
     .accordion-header {
       background-color: #fef4c5;
       padding: 15px;
@@ -137,23 +123,19 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
-
     .accordion-header:hover {
       background-color: #ffe066;
     }
-
     .accordion-content {
       display: none;
       padding: 10px 15px;
       background-color: #fffefa;
       animation: fadeIn 0.4s ease-in-out;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-5px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     .item {
       display: flex;
       align-items: center;
@@ -162,11 +144,9 @@
       flex-wrap: wrap;
       transition: transform 0.2s ease;
     }
-
     .item:hover {
       transform: scale(1.01);
     }
-
     .item img {
       width: 50px;
       height: 50px;
@@ -174,20 +154,17 @@
       border-radius: 6px;
       margin-right: 10px;
     }
-
     .left {
       display: flex;
       align-items: center;
       gap: 10px;
       flex: 1;
     }
-
     .price {
       font-weight: bold;
       white-space: nowrap;
       margin-left: auto;
     }
-
     .footer {
       display: flex;
       flex-wrap: wrap;
@@ -204,12 +181,10 @@
       z-index: 1000;
       font-size: 12px;
     }
-
     .footer span {
       font-weight: bold;
       white-space: nowrap;
     }
-
     .footer a {
       font-size: 11px;
       padding: 3px 6px;
@@ -220,12 +195,10 @@
       border: 1px solid #000;
       white-space: nowrap;
     }
-
     .footer a:hover {
       background-color: #ffe066;
       text-decoration: underline;
     }
-
     @media (max-width: 767px) {
       .accordion-content {
         animation: fadeIn 0.4s ease-in-out;
@@ -259,12 +232,10 @@
   </style>
 </head>
 <body>
-
 <div class="welcome-message" id="welcome">
   <img src="img/logo.jpg" alt="Limon Cafe Logo" class="logo-img">
   <span id="title-text">Limon Cafe'ye Hoş Geldiniz!</span>
 </div>
-
 <header>
   <h1 id="title">
     <img src="img/logo.jpg" alt="Limon Cafe Logo" class="logo-img">
@@ -279,7 +250,6 @@
     </div>
   </h1>
 </header>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="freshJuicesTitle">🥤 Sıkma Meyveler</div>
   <div class="accordion-content">
@@ -301,7 +271,6 @@
     </div>
   </div>
 </div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="coldDrinksTitle">🧋 Soğuk İçecekler</div>
   <div class="accordion-content">
@@ -351,7 +320,6 @@
     </div>
   </div>
 </div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="milkshakeTitle">🥤 Milkshake</div>
   <div class="accordion-content">
@@ -369,7 +337,6 @@
     </div>
   </div>
 </div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="hotDrinksTitle">☕ Sıcak İçecekler</div>
   <div class="accordion-content">
@@ -423,7 +390,6 @@
     </div>
   </div>
 </div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="coldCoffeesTitle">🥤 Soğuk Kahveler</div>
   <div class="accordion-content">
@@ -461,7 +427,6 @@
     </div>
   </div>
 </div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="turkishCoffeesTitle">🇹🇷 Türk Kahveleri</div>
   <div class="accordion-content">
@@ -487,7 +452,6 @@
     </div>
   </div>
 </div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="teasTitle">🫖 Çaylar</div>
   <div class="accordion-content">
@@ -505,7 +469,53 @@
     </div>
   </div>
 </div>
-
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this)" id="pastaTitle">🍝 Makarnalar</div>
+  <div class="accordion-content">
+    <div class="item">
+      <div class="left"><img src="img2/fettucini.jpg"><span id="item89"><span id="item89name">Fettucini Alfredo</span><br><small id="item89desc">Tavuk göğsü, mantar, krema, parmesan peyniri</small></span></div>
+      <div class="price">260 TL</div>
+    </div>
+    <div class="item">
+      <div class="left"><img src="img2/manti.jpg"><span id="item90">Mantı</span></div>
+      <div class="price">260 TL</div>
+    </div>
+    <div class="item">
+      <div class="left"><img src="img2/napoliten.jpg"><span id="item92"><span id="item92name">Spagetti Napolitan</span><br><small id="item92desc">Napoliten sos, parmesan peyniri</small></span></div>
+      <div class="price">250 TL</div>
+    </div>
+  </div>
+</div>
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this)" id="chickenDishesTitle">🍗 Tavuk Ürünleri</div>
+  <div class="accordion-content">
+    <div class="item">
+      <div class="left"><img src="img2/barbeku.jpg"><span id="item93"><span id="item93name">Barbekü Soslu Tavuk</span><br><small id="item93desc">Tavuk göğsü, mantar, biber, soğan, barbekü sos, pilav ve yanında cips.</small></span></div>
+      <div class="price">280 TL</div>
+    </div>
+    <div class="item">
+      <div class="left"><img src="img2/kori.jpg"><span id="item94"><span id="item94name">Köri Soslu Tavuk</span><br><small id="item94desc">Tavuk göğsü, mantar, köri sos, pirinç pilavı, patates cips. </small></span></div>
+      <div class="price">280 TL</div>
+    </div>
+    <div class="item">
+      <div class="left"><img src="img2/kori.jpg"><span id="item95"><span id="item95name">Kremalı Tavuk</span><br><small id="item95desc">Tavuk göğsü, krema, pirinç pilavı, patates kızartması, salata.</small></span></div>
+      <div class="price">280 TL</div>
+    </div>
+  </div>
+</div>
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this)" id="grillsTitle">🍖 Izgaralar</div>
+  <div class="accordion-content">
+    <div class="item">
+      <div class="left"><img src="img/kofte.jpg"><span id="item97"><span id="item97name">Köfte Izgara</span><br><small id="item97desc">Köfte, pilav, patates, ızgara domates-biber</small></span></div>
+      <div class="price">330 TL</div>
+    </div>
+    <div class="item">
+      <div class="left"><img src="img2/ızgaraTavuk.jpg"><span id="item98"><span id="item98name">Tavuk Izgara</span><br><small id="item98desc">Tavuk, pilav, patates, ızgara domates-biber</small></span></div>
+      <div class="price">280 TL</div>
+    </div>
+  </div>
+</div>
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="snacksTitle">🥪 Atıştırmalıklar</div>
   <div class="accordion-content">
@@ -539,7 +549,6 @@
     </div>
   </div>
 </div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="kumpirTitle">🥔 Kumpir</div>
   <div class="accordion-content">
@@ -549,39 +558,16 @@
     </div>
   </div>
 </div>
-
-<div class="accordion">
-  <div class="accordion-header" onclick="toggleAccordion(this)" id="coldSandwichesTitle">🌭 Soğuk Sandviçler</div>
-  <div class="accordion-content">
-    <div class="item">
-      <div class="left"><img src="img/klasiksandvic.jpg"><span id="item24"><span id="item24name">Klasik Sandviç</span><br><small id="item24desc">(Domates, Beyaz peynir, Kaşar, Marul, Salam)</small></span></div>
-      <div class="price">170 TL</div>
-    </div>
-    <div class="item">
-      <div class="left"><img src="img/krempeynir.jpg"><span id="item25"><span id="item25name">Krem Peynirli Sandviç</span><br><small id="item25desc">(Domates, Krem peynir, Kaşar, Zeytin, Marul, Salam)</small></span></div>
-      <div class="price">190 TL</div>
-    </div>
-    <div class="item">
-      <div class="left"><img src="img/tonbalik.jpg"><span id="item26"><span id="item26name">Ton Balıklı Sandviç</span><br><small id="item26desc">(Ton balığı, Beyaz peynir, Zeytin, Mısır, Marul, Salatalık turşusu)</small></span></div>
-      <div class="price">220 TL</div>
-    </div>
-    <div class="item">
-      <div class="left"><img src="img/hellim.jpg"><span id="item27"><span id="item27name">Hellim Peynirli Sandviç</span><br><small id="item27desc">(Kızarmış hellim, Domates, Zeytin, Marul, Salam)</small></span></div>
-      <div class="price">220 TL</div>
-    </div>
-  </div>
-</div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="burgersTitle">🍔 Burgerler</div>
   <div class="accordion-content">
     <div class="item">
       <div class="left"><img src="img/klasikburger.jpg"><span id="item29"><span id="item29name">Klasik Burger</span><br><small id="item29desc">(120gr köfte, Domates, Marul, Turşu) [Çedar +20₺]</small></span></div>
-      <div class="price">230 TL</div>
+      <div class="price">300 TL</div>
     </div>
     <div class="item">
       <div class="left"><img src="img/tavukburger.jpg"><span id="item30"><span id="item30name">Tavuk Burger</span><br><small id="item30desc">(Şinitzel, Marul, Domates, Turşu) [Çedar +20₺]</small></span></div>
-      <div class="price">210 TL</div>
+      <div class="price">240 TL</div>
     </div>
     <div class="item">
       <div class="left"><img src="img/limonburger.jpg"><span id="item32"><span id="item32name">Limon Burger</span><br><small id="item32desc">(150gr köfte, Domates, Marul, Turşu, Özel sos) [Çedar +20₺]</small></span></div>
@@ -589,7 +575,6 @@
     </div>
   </div>
 </div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="dessertsTitle">🍰 Tatlılar</div>
   <div class="accordion-content">
@@ -651,7 +636,6 @@
     </div>
   </div>
 </div>
-
 <div class="accordion">
   <div class="accordion-header" onclick="toggleAccordion(this)" id="iceCreamsTitle">🍨 Dondurmalar</div>
   <div class="accordion-content">
@@ -685,15 +669,13 @@
     </div>
   </div>
 </div>
-
 <div class="footer">
   <span dir="ltr">
     <span id="phoneLabel" dir="ltr">Telefon</span>: +90 545 369 03 65
-  </span>   
+  </span>
   <span id="addressLabel">Adres: Araklı, Trabzon</span>
   <a id="mapLink" href="https://maps.app.goo.gl/KQw3n1ojKLSa2UGo7?g_st=iw" target="_blank">Yol Tarifi</a>
 </div>
-
 <script>
   const translations = {
     tr: {
@@ -707,11 +689,13 @@
       teasTitle: "🍵 Çaylar",
       snacksTitle: "🥪 Atıştırmalıklar",
       kumpirTitle: "🥔 Kumpir",
-      coldSandwichesTitle: "🌭 Soğuk Sandviçler",
       burgersTitle: "🍔 Burgerler",
       dessertsTitle: "🍰 Tatlılar",
       milkshakeTitle: "🥤 Milkshake",
       iceCreamsTitle: "🍨 Dondurmalar",
+      pastaTitle: "🍝 Makarnalar",
+      chickenDishesTitle: "🍗 Tavuk Ürünleri",
+      grillsTitle: "🍖 Izgaralar",
       item0: "🌐 Dil Seçimi",
       item1: "Ev Yapımı Limonata",
       item2: "Çilekli Limonata",
@@ -742,30 +726,15 @@
       item22name: "Combo Tabağı",
       item22desc: "Patates kızartması, Soğan halkası, Sosis, Nugget, Kroket",
       item23: "Kumpir",
-      item24name: "Klasik Sandviç",
-      item24desc: "(Domates, Beyaz peynir, Kaşar, Marul, Salam)",
-      item25name: "Krem Peynirli Sandviç",
-      item25desc: "(Domates, Krem peynir, Kaşar, Zeytin, Marul, Salam)",
-      item26name: "Ton Balıklı Sandviç",
-      item26desc: "(Ton balığı, Beyaz peynir, Zeytin, Mısır, Marul, Salatalık turşusu)",
-      item27name: "Hellim Peynirli Sandviç",
-      item27desc: "(Kızarmış hellim, Domates, Zeytin, Marul, Salam)",
-      item28name: "Çorba",
-      item28desc: "Bu bir test ürünüdür, fiyat geçici.",
       item29name: "Klasik Burger",
       item29desc: "(120gr köfte, Domates, Marul, Turşu) [Çedar +20₺]",
       item30name: "Tavuk Burger",
       item30desc: "(Şinitzel, Marul, Domates, Turşu) [Çedar +20₺]",
       item32name: "Limon Burger",
       item32desc: "(150gr köfte, Domates, Marul, Turşu, Özel sos) [Çedar +20₺]",
-      item33name: "Çorba",
-      item33desc: "Bu bir test ürünüdür, fiyat geçici.",
       item34name: "Waffle",
       item34desc: "(Çilek, Muz, Kivi) [Dondurma +30₺]",
-      item35: "Dondurmalı Waffle",
       item36: "Tabak Waffle",
-      item37: "Dubai Cheesecake",
-      item38: "Şiş Waffle",
       item39name: "Espresso",
       item39desc: "Küçük ama güçlü bir kahve, yoğun ve aromatik.",
       item40name: "Americano",
@@ -831,6 +800,25 @@
       item87desc: "Top 30₺",
       item88name: "Vanilya (Sade)",
       item88desc: "Top 30₺",
+      item89name: "Fettucini Alfredo",
+      item89desc: "Tavuk göğsü, mantar, krema, parmesan peyniri",
+      item90: "Mantı",
+      item91name: "Penne Arrabiatta",
+      item91desc: "Arrabiatta sos, parmesan peyniri",
+      item92name: "Spagetti Napolitan",
+      item92desc: "Napoliten sos, parmesan peyniri",
+      item93name: "Barbekü Soslu Tavuk",
+      item93desc: "Mantar, biber, soğan, barbekü sos, pilav ve yanında cips ile servis edilir.",
+      item94name: "Köri Soslu Tavuk",
+      item94desc: "150 Gr tavuk göğsü kültür mantarı, köri sos, pirinç pilavı, patates cipsi soğan",
+      item95name: "Kremalı Tavuk",
+      item95desc: "Tavuk göğsü, krema, pirinç pilavı, patates kızartması, salata",
+      item96name: "Soya Soslu Tavuk",
+      item96desc: "Mantar, biber, soğan, soya sos, pilav ve yanında cips ile servis edilir.",
+      item97name: "Köfte Izgara",
+      item97desc: "Köfte, pilav, patates, ızgara domates-biber",
+      item98name: "Tavuk Izgara",
+      item98desc: "Tavuk, pilav, patates, ızgara domates-biber",
       phoneLabel: "Telefon",
       mapLink: "Yol Tarifi",
       addressLabel: "Adres: Araklı, Trabzon"
@@ -846,11 +834,13 @@
       teasTitle: "🍵 Teas",
       snacksTitle: "🥪 Snacks",
       kumpirTitle: "🥔 Kumpir",
-      coldSandwichesTitle: "🌭 Cold Sandwiches",
       burgersTitle: "🍔 Burgers",
       dessertsTitle: "🍰 Desserts",
       milkshakeTitle: "🥤 Milkshake",
       iceCreamsTitle: "🍨 Ice Creams",
+      pastaTitle: "🍝 Pasta",
+      chickenDishesTitle: "🍗 Chicken Dishes",
+      grillsTitle: "🍖 Grills",
       item0: "🌐 Language",
       item1: "Homemade Lemonade",
       item2: "Strawberry Lemonade",
@@ -881,30 +871,15 @@
       item22name: "Combo Plate",
       item22desc: "French fries, Onion rings, Sausage, Nugget, Croquette",
       item23: "Kumpir",
-      item24name: "Classic Sandwich",
-      item24desc: "(Tomato, White cheese, Kashar, Lettuce, Salami)",
-      item25name: "Cream Cheese Sandwich",
-      item25desc: "(Tomato, Cream cheese, Kashar, Olives, Lettuce, Salami)",
-      item26name: "Tuna Sandwich",
-      item26desc: "(Tuna, White cheese, Olives, Corn, Lettuce, Pickled cucumber)",
-      item27name: "Halloumi Cheese Sandwich",
-      item27desc: "(Fried halloumi, Tomato, Olives, Lettuce, Salami)",
-      item28name: "Soup",
-      item28desc: "This is a test product, price is temporary.",
       item29name: "Classic Burger",
       item29desc: "(120gr meatballs, Tomato, Lettuce, Pickle) [Cheddar +20₺]",
       item30name: "Chicken Burger",
       item30desc: "(Schnitzel, Lettuce, Tomato, Pickle) [Cheddar +20₺]",
       item32name: "Lemon Burger",
       item32desc: "(150gr meatballs, Tomato, Lettuce, Pickle, Special sauce) [Cheddar +20₺]",
-      item33name: "Soup",
-      item33desc: "This is a test product, price is temporary.",
       item34name: "Waffle",
       item34desc: "(Strawberry, Banana, Kiwi) [Ice Cream +30₺]",
-      item35: "Ice Cream Waffle",
       item36: "Plate Waffle",
-      item37: "Dubai Cheesecake",
-      item38: "Skewer Waffle",
       item39name: "Espresso",
       item39desc: "A small but strong coffee, intense and aromatic.",
       item40name: "Americano",
@@ -970,6 +945,25 @@
       item87desc: "Per scoop 30₺",
       item88name: "Vanilla (Plain)",
       item88desc: "Per scoop 30₺",
+      item89name: "Fettucini Alfredo",
+      item89desc: "Chicken breast, mushroom, cream, parmesan cheese",
+      item90: "Manti",
+      item91name: "Penne Arrabiatta",
+      item91desc: "Arrabiatta sauce, parmesan cheese",
+      item92name: "Spaghetti Napolitan",
+      item92desc: "Napolitan sauce, parmesan cheese",
+      item93name: "Barbecue Sauce Chicken",
+      item93desc: "Mushroom, pepper, onion, barbecue sauce, served with rice and chips.",
+      item94name: "Curry Sauce Chicken",
+      item94desc: " chicken breast, cultivated mushroom, curry sauce, rice pilaf, potato chips, onion",
+      item95name: "Creamy Chicken",
+      item95desc: "Chicken breast, cream, rice pilaf, french fries, salad",
+      item96name: "Soy Sauce Chicken",
+      item96desc: "Mushroom, pepper, onion, soy sauce, served with rice and chips.",
+      item97name: "Grilled Chicken",
+      item97desc: "Grilled, rice, potatoes, grilled tomato-pepper",
+      item98name: "Chicken Meatballs",
+      item98desc: "Chicken, rice, potatoes, grilled tomato-pepper",
       phoneLabel: "Phone",
       mapLink: "Get Directions",
       addressLabel: "Address: Araklı, Trabzon"
@@ -985,11 +979,13 @@
       teasTitle: "🍵 الشاي",
       snacksTitle: "🥪 الوجبات الخفيفة",
       kumpirTitle: "🥔 كومبير",
-      coldSandwichesTitle: "🌭 الساندويتشات الباردة",
       burgersTitle: "🍔 برغر",
       dessertsTitle: "🍰 الحلويات",
       milkshakeTitle: "🥤 ميلكشيك",
       iceCreamsTitle: "🍨 آيس كريم",
+      pastaTitle: "🍝 مكرونة",
+      chickenDishesTitle: "🍗 أطباق الدجاج",
+      grillsTitle: "🍖 مشويات",
       item0: "🌐 اختيار اللغة",
       item1: "ليموناضة منزلية",
       item2: "ليموناضة فراولة",
@@ -998,7 +994,7 @@
       item5: "شاي مثلج",
       item6: "كولا",
       item7: "فانتا",
-      item8: "سبraith",
+      item8: "سب alright",
       item9: "شفيبس",
       item10: "ريد بول",
       item11: "صودا",
@@ -1018,32 +1014,17 @@
       item20desc: "بطاطس مقلية، طماطم، خيار، زيتون",
       item21: "بطاطس مقلية",
       item22name: "طبق كومبو",
-      item22desc: "بطاطس مقلية، بصل حلقات، نوقيت، كروكيت",
+      item22desc: "بطاطس مقلية، بصل حلقات، سجق، نوقيت، كروكيت",
       item23: "كومبير",
-      item24name: "ساندويتش كلاسيك",
-      item24desc: "(طماطم، جبنة بيضاء، كشر، خس، سلامي)",
-      item25name: "ساندويتش بالجبنة الكريمية",
-      item25desc: "(طماطم، جبنة كريمية، كشر، زيتون، خس، سلامي)",
-      item26name: "ساندويتش بالتونة",
-      item26desc: "(تونة، جبنة بيضاء، زيتون، ذرة، خس، خيار مخلل)",
-      item27name: "ساندويتش جبنة هالومي",
-      item27desc: "(هالومي مقلي، طماطم، زيتون، خس، سلامي)",
-      item28name: "شوربة",
-      item28desc: "هذا منتج اختبار، السعر مؤقت.",
       item29name: "برغر كلاسيك",
-      item29desc: "يحتوي على كرات لحم 120 غرامًا، طماطم، خس، مخلل (مع جبنة شيدر إضافية بـ ₺20)",
+      item29desc: "يحتوي على كرات لحم 120 غرامًا، طماطم، خس، مخلل (مع جبنة شيدر إضافية بـ 20 ليرة)",
       item30name: "برغر دجاج",
-      item30desc: "يحتوي على شنيتزل، خس، طماطم، مخلل (مع جبنة شيدر إضافية بـ ₺20)",
+      item30desc: "يحتوي على شنيتزل، خس، طماطم، مخلل (مع جبنة شيدر إضافية بـ 20 ليرة)",
       item32name: "برغر ليمون",
-      item32desc: "يحتوي على كرات لحم 150 غرامًا، طماطم، خس، مخلل، صلصة خاصة (مع جبنة شيدر إضافية بـ ₺20)",
-      item33name: "شوربة",
-      item33desc: "هذا منتج اختبار، السعر مؤقت.",
+      item32desc: "يحتوي على كرات لحم 150 غرامًا، طماطم، خس، مخلل، صلصة خاصة (مع جبنة شيدر إضافية بـ 20 ليرة)",
       item34name: "وافل",
-      item34desc: "(فراولة، موز، كيوي) [آيس كريم +30₺]",
-      item35: "وافل بالآيس كريم",
+      item34desc: "(فراولة، موز، كيوي) [آيس كريم +30 ليرة]",
       item36: "وافل طبق",
-      item37: "تشيز كيك دبي",
-      item38: "وافل شواء",
       item39name: "إسبريسو",
       item39desc: "قهوة صغيرة ولكن قوية، مكثفة وذات أريج.",
       item40name: "أمريكانو",
@@ -1109,12 +1090,30 @@
       item87desc: "لكل مغرفة 30 ليرة",
       item88name: "فانيليا (سادة)",
       item88desc: "لكل مغرفة 30 ليرة",
+      item89name: "فيتوتشيني ألفريدو",
+      item89desc: "صدر دجاج، فطر، كريمة، جبن بارميزان",
+      item90: "مانتي",
+      item91name: "بيني أرابياتا",
+      item91desc: "صلصة أرابياتا، جبن بارميزان",
+      item92name: "سباغيتي نابوليتان",
+      item92desc: "صلصة نابوليتان، جبن بارميزان",
+      item93name: "دجاج بصلصة الباربيكيو",
+      item93desc: "فطر، فلفل، بصل، صلصة باربيكيو، يقدم مع أرز ورقائق بطاطس.",
+      item94name: "دجاج بصلصة الكاري",
+      item94desc: "غرام صدر دجاج، فطر مزروع، صلصة كاري، أرز بيلاف، رقائق بطاطس، بصل",
+      item95name: "دجاج كريمي",
+      item95desc: "صدر دجاج، كريمة، أرز بيلاف، بطاطس مقلية، سلطة",
+      item96name: "دجاج بصلصة الصويا",
+      item96desc: "فطر، فلفل، بصل، صلصة صويا، يقدم مع أرز ورقائق بطاطس.",
+      item97name: "كفتة مشوية",
+      item97desc: "كفتة، أرز، بطاطس، طماطم مشوية-فلفل",
+      item98name: "دجاج مشوي",
+      item98desc: "فرخة, أرز، بطاطس، طماطم مشوية-فلفل",
       phoneLabel: "هاتف",
       mapLink: "الاتجاهات",
       addressLabel: "العنوان: أراكلي، طرابزون"
     }
   };
-
   function setLanguage(lang) {
     const t = translations[lang];
     for (const key in t) {
@@ -1146,26 +1145,19 @@
     document.documentElement.lang = lang;
     document.querySelector('.lang-options').style.display = 'none';
   }
-
   function toggleLangOptions() {
     const langOptions = document.querySelector('.lang-options');
     langOptions.style.display = langOptions.style.display === 'block' ? 'none' : 'block';
   }
-
   function toggleAccordion(header) {
     const content = header.nextElementSibling;
     content.style.display = content.style.display === 'block' ? 'none' : 'block';
-
-    // Kategoriyi sayfanın üstüne kaydır
-    const headerOffset = header.offsetTop - 20; // Üst boşluk için 20px ayarı
+    const headerOffset = header.offsetTop - 20;
     const headerHeight = document.querySelector('header').offsetHeight;
-
     window.scrollTo({
-      top: headerOffset - headerHeight, // Header'ın üstünden başla
+      top: headerOffset - headerHeight,
       behavior: 'smooth'
     });
-
-    // Mobil cihazlarda footer ile çakışmayı önlemek için ayarlama
     const footer = document.querySelector('.footer');
     if (window.innerWidth <= 767 && footer) {
       const footerHeight = footer.offsetHeight;
